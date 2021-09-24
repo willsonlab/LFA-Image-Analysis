@@ -8,11 +8,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import numpy as np
 import matplotlib.pyplot as plt
-#from skimage import io
-#from skimage.io import imread
-#from skimage.io._plugins import pil_plugin
-#from skimage.io import use_plugin
-#use_plugin('pil', 'imread')
+
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from skimage.filters import threshold_otsu
@@ -63,12 +59,7 @@ def strip_detection():
 
     settingChange()
     colorModeChange()
-#    print("dimension: ", (np.ndim(r)))
-    
-#    if ((np.ndim(r))>2):
-#        image = r[:,:,colorIndex]
-#    else:
-#        image=r
+
         
     p2, p98 = np.percentile(image, (2, 98))
     img_rescale =rescale_intensity(image,in_range=(p2, p98))
@@ -327,10 +318,7 @@ def settingChange(var=None):
     selectedStrip=int(stripSelSpn.get())-1
     relHeight=float(relHeightScale.get())
     
-#    if (selectedStrip+1)>count:
-#        for k in range (0, ((selectedStrip+1)-count )):
-#            stripSelSpn.invoke("buttondown")
-#        selectedStrip=count-1
+
         
 def intensityModeChange():
     intensityMode=bool(intensityOpt.get())
